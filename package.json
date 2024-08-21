@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "start-server-dev": "nodemon server.js"
   },
   "author": "ali raihan nashrullah",
