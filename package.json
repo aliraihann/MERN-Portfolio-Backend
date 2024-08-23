@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  },
   "scripts": {
     "start": "node server.js",
     "start-server-dev": "nodemon server.js"
