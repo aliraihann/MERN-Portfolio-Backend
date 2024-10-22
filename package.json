@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start-server-dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "author": "ali raihan nashrullah",
   "license": "ISC",
