@@ -18,11 +18,16 @@ router.get("/get-portfolio-data", async (req, res) => {
     const experiences = await Experience.find();
     const projects = await Project.find();
 
+    let sortedExperience = experiences.slice().sort((a,b) => {
+      let aPeriod = new Date(a.period.split('-')[1].trim());
+      let bPeriod = new Date(b.period.split('-')[1].trim());
+      return bPeriod - aPeriod;
+  })
     res.status(200).send({
       intro: intros[0],
       about: about[0],
       contact: contacts[0],
-      experiences: experiences,
+      experiences: sortedExperience,
       projects: projects,
     });
   } catch (error) {

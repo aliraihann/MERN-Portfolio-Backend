@@ -1,8 +1,8 @@
 import express from 'express';
-import dbConfig from './config/dbConfig.js'
+import dbConfig from './src/config/dbConfig.js'
 import { configDotenv } from "dotenv";
 configDotenv();
-import portfolioRoutes from './routes/portfolioRoute.js';
+import portfolioRoutes from './src/routes/portfolioRoute.js';
 import cors from "cors"
 const app = express();
 
