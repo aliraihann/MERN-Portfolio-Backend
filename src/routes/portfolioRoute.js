@@ -19,8 +19,8 @@ router.get("/get-portfolio-data", async (req, res) => {
     const projects = await Project.find();
 
     let sortedExperience = experiences.slice().sort((a,b) => {
-      let aPeriod = new Date(a.period.split('-')[1].trim());
-      let bPeriod = new Date(b.period.split('-')[1].trim());
+      let aPeriod = new Date(a.period.split('-')[0].trim());
+      let bPeriod = new Date(b.period.split('-')[0].trim());
       return bPeriod - aPeriod;
   })
     res.status(200).send({
